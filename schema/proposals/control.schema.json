@@ -1,0 +1,144 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://onelanguageforrisk.org/schema/control.schema.json",
+ "title": "Control (proposal)",
+ "description": "Framework proposal; no open schema exists for a control. Attributes from Table 19.1 and components C4.2, C4.3, C4.4, C6.2 [10] [8] [18].",
+ "x-crmf": {
+  "schema_version": "1.0",
+  "status": "proposal",
+  "catalog_version": "1.0"
+ },
+ "type": "object",
+ "properties": {
+  "id": {
+   "type": "string",
+   "description": "Persistent identifier, unique within the organization."
+  },
+  "catalog_version": {
+   "type": "string",
+   "description": "Catalog version the record was created under (C1.1; seventh principle: currency is a field)."
+  },
+  "schema_version": {
+   "type": "string",
+   "description": "Version of this schema the record validates against."
+  },
+  "version": {
+   "type": "integer",
+   "description": "Version of this record; rises on every change (nothing changes silently)."
+  },
+  "owner": {
+   "type": "string",
+   "description": "Named owner (a person or role, never a function alone)."
+  },
+  "status": {
+   "type": "string",
+   "description": "Lifecycle status.",
+   "enum": [
+    "draft",
+    "current",
+    "retired"
+   ]
+  },
+  "name": {
+   "type": "string",
+   "description": ""
+  },
+  "risk_ids": {
+   "type": "array",
+   "description": "Risks the control modifies.",
+   "items": {
+    "type": "string"
+   }
+  },
+  "hierarchy_level": {
+   "type": "string",
+   "description": "Level on the hierarchy of controls (C4.2) [10].",
+   "enum": [
+    "elimination",
+    "substitution",
+    "engineering",
+    "administrative",
+    "personal_protection"
+   ]
+  },
+  "mode": {
+   "type": "string",
+   "description": "Prevention or detection (C4.3) [8].",
+   "enum": [
+    "prevention",
+    "detection"
+   ]
+  },
+  "human_dependence": {
+   "type": "string",
+   "description": "Degree to which the control depends on a person acting correctly.",
+   "enum": [
+    "none",
+    "partial",
+    "full"
+   ]
+  },
+  "expected_decay": {
+   "type": "string",
+   "description": "Expected decay of effectiveness between tests (chapter 12)."
+  },
+  "frequency": {
+   "type": "string",
+   "description": "How often the control operates or is run."
+  },
+  "measured_effectiveness": {
+   "type": "object",
+   "description": "Effectiveness as measured, not declared (fifth principle).",
+   "properties": {
+    "value": {
+     "type": "number",
+     "description": ""
+    },
+    "method": {
+     "type": "string",
+     "description": ""
+    },
+    "measured_on": {
+     "type": "string",
+     "description": "",
+     "format": "date"
+    }
+   }
+  },
+  "originating_response": {
+   "type": "string",
+   "description": "Response (register row) that created the control (C4.1)."
+  },
+  "designer": {
+   "type": "string",
+   "description": "Who designed the control, by name (twelve-month safeguard, C0.3, C6.2) [18]."
+  },
+  "assurer": {
+   "type": "string",
+   "description": "Who assures it for the current year; must differ from the designer within twelve months of design."
+  },
+  "design_gate": {
+   "type": "object",
+   "description": "Design gate record (C4.4).",
+   "properties": {
+    "passed_on": {
+     "type": "string",
+     "description": "",
+     "format": "date"
+    },
+    "record_ref": {
+     "type": "string",
+     "description": ""
+    }
+   }
+  }
+ },
+ "required": [
+  "id",
+  "name",
+  "hierarchy_level",
+  "mode",
+  "risk_ids"
+ ],
+ "additionalProperties": true
+}

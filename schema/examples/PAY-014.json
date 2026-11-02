@@ -1,0 +1,53 @@
+{
+ "id": "PAY-014",
+ "description": "Given that beneficiary details for high-value payments are verified by a telephone callback performed from memory under cutoff pressure, there is a possibility that a payment is released to a fraudulent or mistaken beneficiary, affecting the corporate payments service, with an unrecoverable loss and a late payment for the client.",
+ "category": "Process execution \u203a manual verification",
+ "likelihood": 3,
+ "impact": 4,
+ "exposure": 12,
+ "response_type": "mitigate",
+ "response_cost": 420000,
+ "response_description": "Selection report SR-2026-07: beneficiary verification block and automated matching.",
+ "owner": "Head of payment operations",
+ "status": "in progress",
+ "crmf": {
+  "validated_statement": {
+   "condition": "beneficiary details for high-value payments are verified by a telephone callback performed from memory under cutoff pressure",
+   "departure": "a payment is released to a fraudulent or mistaken beneficiary",
+   "asset": "the corporate payments service",
+   "consequence": "an unrecoverable loss and a late payment for the client"
+  },
+  "taxonomy_node": "process execution / manual verification",
+  "process": "corporate payments",
+  "tier": "process",
+  "consequence_per_objective": [
+   {
+    "objective_id": "OBJ-PAY-ACCURACY",
+    "consequence": 4
+   },
+   {
+    "objective_id": "OBJ-PAY-TIMELINESS",
+    "consequence": 2
+   },
+   {
+    "objective_id": "OBJ-CLIENT-TRUST",
+    "consequence": 3
+   }
+  ],
+  "likelihood_precision": "estimated from two internal events and one peer case",
+  "scale_version": "bank-scale-2026.1",
+  "exposure": {
+   "inherent": 1800000,
+   "expected": 300000,
+   "measured": 150000
+  },
+  "response_cost_actual": 510000,
+  "decider": "Head of payment operations",
+  "opportunity": false,
+  "action_priority": "H",
+  "scored_under": {
+   "criteria_version": "2026.1",
+   "catalog_version": "1.0"
+  }
+ }
+}

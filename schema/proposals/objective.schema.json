@@ -1,0 +1,130 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://onelanguageforrisk.org/schema/objective.schema.json",
+ "title": "Objective (proposal)",
+ "description": "Framework proposal; no open schema exists for an objective. Attributes from Table 19.1 and components C1.1, C1.5, C1.6 [2] [11] [20]. Marked a proposal until someone other than the author has used it.",
+ "x-crmf": {
+  "schema_version": "1.0",
+  "status": "proposal",
+  "catalog_version": "1.0"
+ },
+ "type": "object",
+ "properties": {
+  "id": {
+   "type": "string",
+   "description": "Persistent identifier, unique within the organization."
+  },
+  "catalog_version": {
+   "type": "string",
+   "description": "Catalog version the record was created under (C1.1; seventh principle: currency is a field)."
+  },
+  "schema_version": {
+   "type": "string",
+   "description": "Version of this schema the record validates against."
+  },
+  "version": {
+   "type": "integer",
+   "description": "Version of this record; rises on every change (nothing changes silently)."
+  },
+  "owner": {
+   "type": "string",
+   "description": "Named owner (a person or role, never a function alone)."
+  },
+  "status": {
+   "type": "string",
+   "description": "Lifecycle status.",
+   "enum": [
+    "draft",
+    "current",
+    "retired"
+   ]
+  },
+  "name": {
+   "type": "string",
+   "description": ""
+  },
+  "tier": {
+   "type": "string",
+   "description": "",
+   "enum": [
+    "system",
+    "process",
+    "organization",
+    "enterprise"
+   ]
+  },
+  "parent_objective_id": {
+   "type": "string",
+   "description": "Objective this one rolls up to."
+  },
+  "appetite_position": {
+   "type": "object",
+   "description": "Position on the appetite scale for the category (C1.3, C1.4) [4] [6].",
+   "properties": {
+    "category": {
+     "type": "string",
+     "description": ""
+    },
+    "position": {
+     "type": "string",
+     "description": ""
+    },
+    "scale_version": {
+     "type": "string",
+     "description": ""
+    }
+   }
+  },
+  "tolerance": {
+   "type": "object",
+   "description": "Acceptable variation in the measure of the objective (C1.5, C1.6) [2].",
+   "properties": {
+    "measure": {
+     "type": "string",
+     "description": ""
+    },
+    "lower": {
+     "type": "number",
+     "description": ""
+    },
+    "upper": {
+     "type": "number",
+     "description": ""
+    },
+    "unit": {
+     "type": "string",
+     "description": ""
+    },
+    "set_by": {
+     "type": "string",
+     "description": "Decision authority."
+    },
+    "set_on": {
+     "type": "string",
+     "description": "",
+     "format": "date"
+    }
+   }
+  },
+  "aggregated_likelihood_of_miss": {
+   "type": "number",
+   "description": "Aggregated likelihood of the objective being missed (chapter 24, open problem 1).",
+   "minimum": 0,
+   "maximum": 1
+  },
+  "risk_ids": {
+   "type": "array",
+   "description": "Risks that point to this objective.",
+   "items": {
+    "type": "string"
+   }
+  }
+ },
+ "required": [
+  "id",
+  "name",
+  "tier",
+  "owner"
+ ],
+ "additionalProperties": true
+}

@@ -1,0 +1,560 @@
+{
+ "catalog_version": "1.0",
+ "book": "One Language for Risk, first edition, 2026",
+ "generated": "2026-10-28",
+ "layers": {
+  "0": "L0 Govern",
+  "1": "L1 Frame",
+  "2": "L2 Identify",
+  "3": "L3 Analyze",
+  "4": "L4 Respond",
+  "5": "L5 Monitor",
+  "6": "L6 Record, Assure and Report"
+ },
+ "components": [
+  {
+   "code": "C0.1",
+   "name": "Purpose and principles",
+   "layer": "L0 Govern",
+   "requirement": "A written statement, approved by the governing body, that risk management exists to create and protect value. The risk management system is evaluated at least annually against the eight principles (integrated, structured and comprehensive, customized, inclusive, dynamic, best available information, human and cultural factors, continual improvement), with evidence recorded per principle.",
+   "provenance": "ISO 31000:2018 clause 4 [1]",
+   "sources": [
+    1
+   ],
+   "chapter": 15
+  },
+  {
+   "code": "C0.2",
+   "name": "Governance and culture",
+   "layer": "L0 Govern",
+   "requirement": "The governing body oversees risk and its oversight is recorded. Culture is defined, measured in eight aspects on a stated cycle, and reported on the same page as risk and performance.",
+   "provenance": "COSO ERM component 1, principles 1 to 5 and 20 [2]; IRM Risk Culture, eight aspects [6]; Orange Book principle A [4]",
+   "sources": [
+    2,
+    4,
+    6
+   ],
+   "chapter": 15
+  },
+  {
+   "code": "C0.3",
+   "name": "Three lines and prohibitions",
+   "layer": "L0 Govern",
+   "requirement": "Management owns risks and controls; independent functions oversee; internal audit assures; a governing body is named as accountable for all three. Three prohibitions are written into policy: internal audit does not set appetite, does not choose responses, does not own policies. Whoever designed a control does not assure it for twelve months.",
+   "provenance": "IIA Global Internal Audit Standards 2024 and statements of position, July 2026 [18]",
+   "sources": [
+    18
+   ],
+   "chapter": 15
+  },
+  {
+   "code": "C0.4",
+   "name": "Govern first",
+   "layer": "L0 Govern",
+   "requirement": "Governance is a function with outcomes of its own, each with a current and a target state: context, risk strategy, roles, policy, oversight, supply chain. Appetite and tolerance statements are governance outcomes. Positive risks are characterized and decided in the same forum as threats.",
+   "provenance": "NIST CSF 2.0, Govern function, GV.RM-02 and GV.RM-07 [23]",
+   "sources": [
+    23
+   ],
+   "chapter": 15
+  },
+  {
+   "code": "C0.5",
+   "name": "Risk leadership",
+   "layer": "L0 Govern",
+   "requirement": "Every decision informed by a risk analysis names its decision authority, who is accountable for the decision; the analyst is accountable for the analysis. Decision authorities are named per tier. No decision is recorded without a named decider.",
+   "provenance": "NASA Risk Management Handbook v2.0, risk leadership and RIDM [11]",
+   "sources": [
+    11
+   ],
+   "chapter": 15
+  },
+  {
+   "code": "C1.1",
+   "name": "Scope, context and criteria",
+   "layer": "L1 Frame",
+   "requirement": "Scope, context and criteria are written and versioned before any assessment. Criteria state how likelihood is judged, how consequence is judged, how they are combined and what is acceptable. Every register row carries the criteria version it was scored under; no score is accepted without one.",
+   "provenance": "ISO 31000:2018 clause 6.3 [1]",
+   "sources": [
+    1
+   ],
+   "chapter": 15
+  },
+  {
+   "code": "C1.2",
+   "name": "Strategy linkage",
+   "layer": "L1 Frame",
+   "requirement": "Three strategy risks are assessed and recorded at least annually: misalignment with mission and values, unweighed implications of the chosen strategy, failure of execution. Risk is viewed across the portfolio by objective, not one row at a time.",
+   "provenance": "COSO ERM principles 6 to 9 and 14 [2]",
+   "sources": [
+    2
+   ],
+   "chapter": 15
+  },
+  {
+   "code": "C1.3",
+   "name": "Appetite scale",
+   "layer": "L1 Frame",
+   "requirement": "Appetite is set per risk category on a five-position scale: averse, minimal, cautious, open, eager. Each category carries an optimal position and an accepted position (the source's “tolerable”), with a date by which the optimal is to be regained. Appetite may not be lowered to accommodate risks already tolerated. Any change of position is a governing-body decision with a record.",
+   "provenance": "Orange Book 2023 and Risk Appetite Guidance Note v2.0 [4]",
+   "sources": [
+    4
+   ],
+   "chapter": 15
+  },
+  {
+   "code": "C1.4",
+   "name": "Layered appetite",
+   "layer": "L1 Frame",
+   "requirement": "Three nested boundaries are stated: the risk universe; the risk universe boundary (the source's “tolerance boundary”), the most the organization could bear; appetite inside it. Appetite is cascaded to strategic, tactical and operational levels, each consistent with the level above and written in that level's terms.",
+   "provenance": "IRM Risk Appetite and Tolerance (2011) [6]",
+   "sources": [
+    6
+   ],
+   "chapter": 15
+  },
+  {
+   "code": "C1.5",
+   "name": "Appetite versus tolerance",
+   "layer": "L1 Frame",
+   "requirement": "Appetite is a broad qualitative statement set by the governing body. Tolerance is a measurable range tied to at least one leading and one lagging indicator. Neither substitutes for the other; an appetite statement with no linked tolerance is recorded as incomplete.",
+   "provenance": "NIST IR 8286 Rev. 1 [9]",
+   "sources": [
+    9
+   ],
+   "chapter": 15
+  },
+  {
+   "code": "C1.6",
+   "name": "Tolerance per objective",
+   "layer": "L1 Frame",
+   "requirement": "Each objective carries its own tolerance, set by the decision authority before alternatives are analyzed. Aggregated risk against an objective is reported as the likelihood of missing it, including an allowance for unidentified risk, not as an average of scores. Consequences are stated against objectives and their tolerances.",
+   "provenance": "NASA Risk Management Handbook v2.0, RIDM [11]",
+   "sources": [
+    11
+   ],
+   "chapter": 15
+  },
+  {
+   "code": "C1.7",
+   "name": "Three tiers",
+   "layer": "L1 Frame",
+   "requirement": "Every risk record declares its tier: organization (enterprise), mission or business process, or system. Roll-up from tier to tier normalizes records as it goes. A record without a tier is rejected.",
+   "provenance": "NIST SP 800-39 [20]; NIST IR 8286 Rev. 1 [9]",
+   "sources": [
+    9,
+    20
+   ],
+   "chapter": 15
+  },
+  {
+   "code": "C2.1",
+   "name": "Source taxonomy and source by process matrix",
+   "layer": "L2 Identify",
+   "requirement": "Every risk carries a node of a versioned, source-organized taxonomy with three levels and an “other” branch at each; branches are prioritized by summed exposure, not by count; the taxonomy is crossed with the process map in a matrix whose totals name the most influential source and the most exposed process.",
+   "provenance": "Risk breakdown structure and matrix [3]",
+   "sources": [
+    3
+   ],
+   "chapter": 16
+  },
+  {
+   "code": "C2.2",
+   "name": "Validated risk statement",
+   "layer": "L2 Identify",
+   "requirement": "The register row is a statement in four parts, condition, departure, asset, consequence against an objective; a statement missing a part or embedding its own solution is rejected; a nine-field description sits beneath it.",
+   "provenance": "Risk management handbook [11]; practitioner standard's nine-field description [6]",
+   "sources": [
+    6,
+    11
+   ],
+   "chapter": 16
+  },
+  {
+   "code": "C2.3",
+   "name": "Failure-mode decomposition",
+   "layer": "L2 Identify",
+   "requirement": "Each process is decomposed into functions written as verb and noun, each function into its failure modes, effects and causes; controls in place are tagged as acting on the cause or on the mode; applicable to any process.",
+   "provenance": "Failure mode and effects analysis [8]",
+   "sources": [
+    8
+   ],
+   "chapter": 16
+  },
+  {
+   "code": "C2.4",
+   "name": "Horizon scanning",
+   "layer": "L2 Identify",
+   "requirement": "A scanning routine with declared drivers, a stated cadence and a radar with a trail; each signal is classified by speed, slow risks to the register as scenarios, fast risks to continuous monitoring with an indicator and a threshold.",
+   "provenance": "Horizon scanning guide [6]",
+   "sources": [
+    6
+   ],
+   "chapter": 16
+  },
+  {
+   "code": "C2.5",
+   "name": "External vocabularies",
+   "layer": "L2 Identify",
+   "requirement": "Identification consults four controlled lists, the thirty-three global risks on two horizons, the supervisors' vulnerabilities, the two hundred and eighty-one coded hazards and the four-part security scenario, and records the matching identifier as a field; the lists are mapped to the taxonomy, not adopted as it; an internal perception survey follows the published method.",
+   "provenance": "Global risks report [22]; supervisory radar [27]; hazard profiles [24]; register series [9]",
+   "sources": [
+    9,
+    22,
+    24,
+    27
+   ],
+   "chapter": 16
+  },
+  {
+   "code": "C2.6",
+   "name": "Opportunities",
+   "layer": "L2 Identify",
+   "requirement": "Identification is run from the threat side, the opportunity side and both, with the technique and the side it finds recorded; a positive risk is a full register row with an opportunity flag and the same statement, node, process and tier as a negative one.",
+   "provenance": "Practitioner standard [6]; register series [9]; enterprise framework [2]",
+   "sources": [
+    2,
+    6,
+    9
+   ],
+   "chapter": 16
+  },
+  {
+   "code": "C2.7",
+   "name": "Component-level supply chain",
+   "layer": "L2 Identify",
+   "requirement": "For every third party the component is also known: a software bill of materials with eleven minimum fields, a hardware bill with geography of manufacture, the chain of nth parties; a bill that does not declare completeness is stored as incomplete; redacted and unknown fields are distinguished; every questionnaire question traces to a standard.",
+   "provenance": "Supply-chain instruments [15]",
+   "sources": [
+    15
+   ],
+   "chapter": 16
+  },
+  {
+   "code": "C3.1",
+   "name": "The scenario triplet",
+   "layer": "L3 Analyze",
+   "requirement": "Every analyzed risk is recorded as a scenario, a likelihood and a consequence, each with its uncertainty; likelihood is a probability, a frequency or a calibrated word, never a bare adjective; consequence is stated per objective; a margin is reserved for unknown risks.",
+   "provenance": "Risk management handbook [11]",
+   "sources": [
+    11
+   ],
+   "chapter": 16
+  },
+  {
+   "code": "C3.2",
+   "name": "Honest scales",
+   "layer": "L3 Analyze",
+   "requirement": "Every label maps to a versioned numeric band; consequence is assessed per objective and the highest severity governs; every estimate carries a precision field; probability words carry their bands; a matrix is used for communication only, and only after its cells pass a consistency test.",
+   "provenance": "Probability and impact literature; Cox's critique [12]",
+   "sources": [
+    12
+   ],
+   "chapter": 16
+  },
+  {
+   "code": "C3.3",
+   "name": "Action Priority",
+   "layer": "L3 Analyze",
+   "requirement": "Severity, occurrence and detection are rated one to ten; priority is read from a table in which severity dominates; a severity of nine or ten requires action or a signed acceptance by someone with authority; the product survives only as a legacy figure; ratings are revisited after action with history kept.",
+   "provenance": "Failure mode and effects analysis, harmonized handbook [8]",
+   "sources": [
+    8
+   ],
+   "chapter": 16
+  },
+  {
+   "code": "C3.4",
+   "name": "Simulation that proves itself",
+   "layer": "L3 Analyze",
+   "requirement": "Every simulated result reports convergence with a standard error, the sampling scheme, a validation against a closed-form case, a heavy-tail check, a global sensitivity ranking by share of variance, and the seed and model version; a result missing any of these is a draft.",
+   "provenance": "Open engineering course [26]",
+   "sources": [
+    26
+   ],
+   "chapter": 16
+  },
+  {
+   "code": "C3.5",
+   "name": "Composite indices",
+   "layer": "L3 Analyze",
+   "requirement": "Indicators are normalized to zero to ten; dimensions are aggregated geometrically so that a zero zeroes the score; a reliability index from missing and aged data is published beside every score; the index runs on a cadence matched to what it measures, with three clocks kept apart.",
+   "provenance": "Humanitarian risk index methodology [7]",
+   "sources": [
+    7
+   ],
+   "chapter": 16
+  },
+  {
+   "code": "C3.6",
+   "name": "Regulatory model discipline",
+   "layer": "L3 Analyze",
+   "requirement": "A model is legitimate only while named tests pass: backtesting with zones and a fallback, attribution per unit of accountability, outlier tests against a stated base; whatever can be summed is summed once across all books and entities against one limit set in advance, with every excess recorded; parameters are the organization's own.",
+   "provenance": "Market-risk and banking-book standards [5]; credit principles 2025 [19]",
+   "sources": [
+    5,
+    19
+   ],
+   "chapter": 16
+  },
+  {
+   "code": "C3.7",
+   "name": "Integrated stress and reverse stress",
+   "layer": "L3 Analyze",
+   "requirement": "One scenario moves losses, income, capital or cash and liquidity together, year by year, under rules fixed in advance; an inventory records scenarios, owners and last run; sensitivity, scenario and reverse stress test are distinguished; a management action counts only with a prior decision, a trigger and a feasibility test under the stress itself.",
+   "provenance": "European stress-test methodology and guidelines [25]",
+   "sources": [
+    25
+   ],
+   "chapter": 16
+  },
+  {
+   "code": "C3.8",
+   "name": "Climate and physical scenarios",
+   "layer": "L3 Analyze",
+   "requirement": "Reference scenarios on a long and a short horizon; transition and physical variables kept apart, acute and chronic damages not summed; physical scenarios parameterized as hazard by code, exposure, vulnerability and capacity; sector mapping joins scenario to exposure; every input carries version and retraction status.",
+   "provenance": "Climate scenarios [13]; hazard profiles and disaster framework [24]",
+   "sources": [
+    13,
+    24
+   ],
+   "chapter": 16
+  },
+  {
+   "code": "C3.9",
+   "name": "Structural models",
+   "layer": "L3 Analyze",
+   "requirement": "Where failure logic can be drawn, fault and event trees with common-cause failure and human reliability; minimal cut sets listed; importance measures rank controls by contribution to the top event; where the logic cannot be drawn, the record names the method used instead and why.",
+   "provenance": "Probabilistic risk assessment procedures guide [11]",
+   "sources": [
+    11
+   ],
+   "chapter": 16
+  },
+  {
+   "code": "C4.1",
+   "name": "Seven responses, named decider",
+   "layer": "L4 Respond",
+   "requirement": "Every risk carries exactly one response from accept, avoid, mitigate, share, transfer, realize, share, enhance; a row with no response is invalid. Alternatives are compared on cost, effectiveness and feasibility, and the register records the named person who decided and the date.",
+   "provenance": "NIST IR 8286 [9]; NIST SP 800-39 [20]; COSO [2]",
+   "sources": [
+    2,
+    9,
+    20
+   ],
+   "chapter": 17
+  },
+  {
+   "code": "C4.2",
+   "name": "Hierarchy of controls",
+   "layer": "L4 Respond",
+   "requirement": "Every control carries its level (elimination, substitution, engineering, administrative, personal protection), a human-dependence flag and an expected decay profile; controls at the two lower levels are re-tested more often and their ratings age; aggregation weights by level, so a policy and an automated block never count the same.",
+   "provenance": "NIOSH / CDC [10]",
+   "sources": [
+    10
+   ],
+   "chapter": 17
+  },
+  {
+   "code": "C4.3",
+   "name": "Prevention and detection",
+   "layer": "L4 Respond",
+   "requirement": "Every control is tagged prevention (acts on the cause) or detection (acts on the mode); occurrence and detection ratings are revisited after any action with the previous values kept, so the register shows whether the action worked.",
+   "provenance": "ASQ FMEA [8]",
+   "sources": [
+    8
+   ],
+   "chapter": 17
+  },
+  {
+   "code": "C4.4",
+   "name": "Design gate",
+   "layer": "L4 Respond",
+   "requirement": "No new product, process, system or material change goes live before a review asks whether its hazards can be eliminated or substituted rather than administered; the answer, the level chosen and the signatory are recorded on the control.",
+   "provenance": "NIOSH PtD [10]; BCBS PSMOR principle 7 [17]",
+   "sources": [
+    10,
+    17
+   ],
+   "chapter": 17
+  },
+  {
+   "code": "C4.5",
+   "name": "Decision record",
+   "layer": "L4 Respond",
+   "requirement": "Responses above a stated materiality are recorded in a selection report: alternatives, tolerance per objective, risk of each alternative, rationale, expected exposure, decider, date. Acceptance of a risk above the appetite position is communicated to the governing body.",
+   "provenance": "NASA RIDM [11]; IIA standard 11.5 [18]",
+   "sources": [
+    11,
+    18
+   ],
+   "chapter": 17
+  },
+  {
+   "code": "C4.6",
+   "name": "Proportionality",
+   "layer": "L4 Respond",
+   "requirement": "In the tolerable region, treatment continues until the next step is grossly disproportionate to its benefit; the disproportion is argued in writing with the cost and benefit of the next step, never assumed.",
+   "provenance": "risk-engineering.org [26]",
+   "sources": [
+    26
+   ],
+   "chapter": 17
+  },
+  {
+   "code": "C4.7",
+   "name": "AI controls",
+   "layer": "L4 Respond",
+   "requirement": "Every AI system is mapped, measured and managed against the seven trustworthiness characteristics with a current and a target profile; each carries decision rights set by appetite: act reversibly under monitoring, prepare for human approval, or inform only. Tested at model, adversarial and field level.",
+   "provenance": "NIST AI RMF and profiles [21]; PMI AI branch [3]",
+   "sources": [
+    3,
+    21
+   ],
+   "chapter": 17
+  },
+  {
+   "code": "C5.1",
+   "name": "Risk data discipline",
+   "layer": "L5 Monitor",
+   "requirement": "Every number that reaches a risk report is accurate and reconciled, complete across entities and risk types, timely including in a crisis, adaptable to unplanned questions, and carries lineage: source, transformation and owner, walkable backward. Applies to the register as much as to a capital ratio.",
+   "provenance": "BCBS 239 [17]",
+   "sources": [
+    17
+   ],
+   "chapter": 18
+  },
+  {
+   "code": "C5.2",
+   "name": "Indicators",
+   "layer": "L5 Monitor",
+   "requirement": "Every indicator has a threshold; every breach and its escalation are traceable to a recipient and an action; leading indicators are reported apart from lagging ones, never mixed in one view. Threshold is distinct from limit and tolerance.",
+   "provenance": "BCBS PSMOR [17]; risk-engineering.org [26]",
+   "sources": [
+    17,
+    26
+   ],
+   "chapter": 18
+  },
+  {
+   "code": "C5.3",
+   "name": "Events, near misses and root cause",
+   "layer": "L5 Monitor",
+   "requirement": "Losses and near misses enter one base with cause in a fixed taxonomy; barrier analysis names from the register the control that should have prevented and the one that should have detected the event, and why each did not; corrective action is systemic; a recurrence chart is kept until closure is demonstrated. Failed controls get their measured effectiveness and ratings revised.",
+   "provenance": "ASQ RCA and 8D [14]; BCBS PSMOR [17]",
+   "sources": [
+    14,
+    17
+   ],
+   "chapter": 18
+  },
+  {
+   "code": "C5.4",
+   "name": "Common incident schema",
+   "layer": "L5 Monitor",
+   "requirement": "One structured incident record compatible with the supervisory exchange format, four sections and three phases; loss base, cyber log and third-party incidents are views of it; barrier that failed and recurrence status are extensions that keep the base record valid.",
+   "provenance": "FSB FIRE [27]",
+   "sources": [
+    27
+   ],
+   "chapter": 18
+  },
+  {
+   "code": "C5.5",
+   "name": "Calibration",
+   "layer": "L5 Monitor",
+   "requirement": "Estimates are confronted with outcomes: likelihood bands against event counts, detection ratings against escapes, simulated distributions against losses; scales and models are recalibrated with the evidence and every change is versioned so trends survive it.",
+   "provenance": "PMI library [12]; BIS backtesting [5]",
+   "sources": [
+    5,
+    12
+   ],
+   "chapter": 18
+  },
+  {
+   "code": "C5.6",
+   "name": "Continuity",
+   "layer": "L5 Monitor",
+   "requirement": "A business impact analysis per process with maximum tolerable outage, recovery time and recovery point; the resource inherits the most demanding function's recovery time and the recovery point dictates backup frequency, both written as tests; exercises produce corrective actions tracked to closure.",
+   "provenance": "Ready.gov [16]; NIST IR 8286D [9]",
+   "sources": [
+    9,
+    16
+   ],
+   "chapter": 18
+  },
+  {
+   "code": "C5.7",
+   "name": "Lifecycle and triggers",
+   "layer": "L5 Monitor",
+   "requirement": "Every register object has a lifecycle state with continuous authorization and an explicit disposal step; substantial change triggers reassessment and reopens the design gate; early warning runs on at least three cadences and, for physical hazards, four pillars.",
+   "provenance": "NIST SP 800-37 [20]; COSO principle 15 [2]; INFORM [7]; UNDRR [24]",
+   "sources": [
+    2,
+    7,
+    20,
+    24
+   ],
+   "chapter": 18
+  },
+  {
+   "code": "C6.1",
+   "name": "Open risk register",
+   "layer": "L6 Record, Assure and Report",
+   "requirement": "Eleven register fields per row; a detail record with inherent, expected and measured exposure, planned and actual cost, source of information, dependencies and follow-up; roll-up by declared tier from system to organization to enterprise; export and import in the published schema, with framework fields as validating extensions.",
+   "provenance": "NIST IR 8286 and schemas [9]",
+   "sources": [
+    9
+   ],
+   "chapter": 18
+  },
+  {
+   "code": "C6.2",
+   "name": "Assurance map and reliance",
+   "layer": "L6 Record, Assure and Report",
+   "requirement": "Every principal risk shows the assurance it receives by line and provider; reliance on another provider is assessed and documented before it is taken; the control object carries designer and assurer, and the two may not be the same person within twelve months.",
+   "provenance": "IIA standards 9.5 and statements [18]; Orange Book [4]",
+   "sources": [
+    4,
+    18
+   ],
+   "chapter": 18
+  },
+  {
+   "code": "C6.3",
+   "name": "Explainability",
+   "layer": "L6 Record, Assure and Report",
+   "requirement": "Every finding, rating or alert records the rule, the data, the threshold and the version that produced it; every simulation records its seed; where an AI system contributed, its version and last test level are named.",
+   "provenance": "PMI / Cox [12]; risk-engineering.org [26]",
+   "sources": [
+    12,
+    26
+   ],
+   "chapter": 18
+  },
+  {
+   "code": "C6.4",
+   "name": "Reporting",
+   "layer": "L6 Record, Assure and Report",
+   "requirement": "One page per principal risk for the governing body: appetite position, tolerance status, indicators with thresholds and trend, events of the period, actions with dates, assurance opinion and explainability note; risk shown with culture and performance, not alone.",
+   "provenance": "Orange Book [4]; COSO principle 20 [2]",
+   "sources": [
+    2,
+    4
+   ],
+   "chapter": 18
+  },
+  {
+   "code": "C6.5",
+   "name": "Maturity",
+   "layer": "L6 Record, Assure and Report",
+   "requirement": "Each layer carries a current and a target profile and a tier from 1 to 4 on two dimensions, risk-informed and repeatable; the gap and plan are reported with the risks; tiers describe the organization, not the controls.",
+   "provenance": "NIST CSF 2.0 [23]; COSO 2026 [2]",
+   "sources": [
+    2,
+    23
+   ],
+   "chapter": 18
+  }
+ ]
+}

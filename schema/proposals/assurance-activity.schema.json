@@ -1,0 +1,106 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://onelanguageforrisk.org/schema/assurance-activity.schema.json",
+ "title": "Assurance activity (proposal)",
+ "description": "Framework proposal; no open schema exists for an act of assurance. Attributes from Table 19.1 and components C6.2, C0.3 [18] [4].",
+ "x-crmf": {
+  "schema_version": "1.0",
+  "status": "proposal",
+  "catalog_version": "1.0"
+ },
+ "type": "object",
+ "properties": {
+  "id": {
+   "type": "string",
+   "description": "Persistent identifier, unique within the organization."
+  },
+  "catalog_version": {
+   "type": "string",
+   "description": "Catalog version the record was created under (C1.1; seventh principle: currency is a field)."
+  },
+  "schema_version": {
+   "type": "string",
+   "description": "Version of this schema the record validates against."
+  },
+  "version": {
+   "type": "integer",
+   "description": "Version of this record; rises on every change (nothing changes silently)."
+  },
+  "owner": {
+   "type": "string",
+   "description": "Named owner (a person or role, never a function alone)."
+  },
+  "status": {
+   "type": "string",
+   "description": "Lifecycle status.",
+   "enum": [
+    "draft",
+    "current",
+    "retired"
+   ]
+  },
+  "control_id": {
+   "type": "string",
+   "description": "Control assured."
+  },
+  "line": {
+   "type": "string",
+   "description": "",
+   "enum": [
+    "first",
+    "second",
+    "third",
+    "external"
+   ]
+  },
+  "provider": {
+   "type": "string",
+   "description": "Who performed the assurance, by name."
+  },
+  "activity": {
+   "type": "string",
+   "description": "What was done: self-assessment, test, audit, review."
+  },
+  "reliance": {
+   "type": "object",
+   "description": "Reliance assessment on another line's work (IIA standard 9.5) [18].",
+   "properties": {
+    "relies_on": {
+     "type": "string",
+     "description": ""
+    },
+    "assessment": {
+     "type": "string",
+     "description": ""
+    },
+    "assessed_on": {
+     "type": "string",
+     "description": "",
+     "format": "date"
+    }
+   }
+  },
+  "twelve_month_safeguard": {
+   "type": "boolean",
+   "description": "True if the provider did not design the control within the last twelve months (C0.3)."
+  },
+  "opinion": {
+   "type": "string",
+   "description": ""
+  },
+  "opinion_date": {
+   "type": "string",
+   "description": "",
+   "format": "date"
+  }
+ },
+ "required": [
+  "id",
+  "control_id",
+  "line",
+  "provider",
+  "activity",
+  "opinion_date"
+ ],
+ "additionalProperties": true
+}

@@ -1,0 +1,151 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://onelanguageforrisk.org/schema/indicator.schema.json",
+ "title": "Indicator (proposal)",
+ "description": "Framework proposal; no open schema exists for an indicator. Attributes from Table 19.1 and components C5.1, C5.2 [17] [26].",
+ "x-crmf": {
+  "schema_version": "1.0",
+  "status": "proposal",
+  "catalog_version": "1.0"
+ },
+ "type": "object",
+ "properties": {
+  "id": {
+   "type": "string",
+   "description": "Persistent identifier, unique within the organization."
+  },
+  "catalog_version": {
+   "type": "string",
+   "description": "Catalog version the record was created under (C1.1; seventh principle: currency is a field)."
+  },
+  "schema_version": {
+   "type": "string",
+   "description": "Version of this schema the record validates against."
+  },
+  "version": {
+   "type": "integer",
+   "description": "Version of this record; rises on every change (nothing changes silently)."
+  },
+  "owner": {
+   "type": "string",
+   "description": "Named owner (a person or role, never a function alone)."
+  },
+  "status": {
+   "type": "string",
+   "description": "Lifecycle status.",
+   "enum": [
+    "draft",
+    "current",
+    "retired"
+   ]
+  },
+  "name": {
+   "type": "string",
+   "description": ""
+  },
+  "risk_id": {
+   "type": "string",
+   "description": "Risk the indicator watches."
+  },
+  "objective_id": {
+   "type": "string",
+   "description": "Objective whose tolerance it tracks."
+  },
+  "kind": {
+   "type": "string",
+   "description": "",
+   "enum": [
+    "leading",
+    "lagging"
+   ]
+  },
+  "unit": {
+   "type": "string",
+   "description": ""
+  },
+  "threshold": {
+   "type": "object",
+   "description": "",
+   "properties": {
+    "value": {
+     "type": "number",
+     "description": ""
+    },
+    "direction": {
+     "type": "string",
+     "description": "",
+     "enum": [
+      "above",
+      "below"
+     ]
+    },
+    "set_by": {
+     "type": "string",
+     "description": ""
+    },
+    "set_on": {
+     "type": "string",
+     "description": "",
+     "format": "date"
+    }
+   }
+  },
+  "data_lineage": {
+   "type": "object",
+   "description": "Where the number comes from and the properties it must have (C5.1) [17].",
+   "properties": {
+    "source_system": {
+     "type": "string",
+     "description": ""
+    },
+    "owner": {
+     "type": "string",
+     "description": ""
+    },
+    "last_quality_check": {
+     "type": "string",
+     "description": "",
+     "format": "date"
+    }
+   }
+  },
+  "breaches": {
+   "type": "array",
+   "description": "Breach record with escalation (C5.2).",
+   "items": {
+    "type": "object",
+    "properties": {
+     "on": {
+      "type": "string",
+      "description": "",
+      "format": "date"
+     },
+     "value": {
+      "type": "number",
+      "description": ""
+     },
+     "escalated_to": {
+      "type": "string",
+      "description": ""
+     },
+     "resolved_on": {
+      "type": "string",
+      "description": "",
+      "format": "date"
+     }
+    }
+   }
+  },
+  "escalation_path": {
+   "type": "string",
+   "description": ""
+  }
+ },
+ "required": [
+  "id",
+  "name",
+  "kind",
+  "threshold"
+ ],
+ "additionalProperties": true
+}

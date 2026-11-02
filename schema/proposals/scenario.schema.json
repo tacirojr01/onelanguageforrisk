@@ -1,0 +1,165 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://onelanguageforrisk.org/schema/scenario.schema.json",
+ "title": "Scenario (proposal)",
+ "description": "Framework proposal; no open schema exists for a scenario. Attributes from Table 19.1 and components C3.1, C3.4, C3.7, C3.8 [11] [25] [13].",
+ "x-crmf": {
+  "schema_version": "1.0",
+  "status": "proposal",
+  "catalog_version": "1.0"
+ },
+ "type": "object",
+ "properties": {
+  "id": {
+   "type": "string",
+   "description": "Persistent identifier, unique within the organization."
+  },
+  "catalog_version": {
+   "type": "string",
+   "description": "Catalog version the record was created under (C1.1; seventh principle: currency is a field)."
+  },
+  "schema_version": {
+   "type": "string",
+   "description": "Version of this schema the record validates against."
+  },
+  "version": {
+   "type": "integer",
+   "description": "Version of this record; rises on every change (nothing changes silently)."
+  },
+  "owner": {
+   "type": "string",
+   "description": "Named owner (a person or role, never a function alone)."
+  },
+  "status": {
+   "type": "string",
+   "description": "Lifecycle status.",
+   "enum": [
+    "draft",
+    "current",
+    "retired"
+   ]
+  },
+  "risk_ids": {
+   "type": "array",
+   "description": "Risks the scenario quantifies.",
+   "items": {
+    "type": "string"
+   }
+  },
+  "triplet": {
+   "type": "object",
+   "description": "The scenario triplet (C3.1) [11]: what can go wrong, how likely, what the consequences are, each with its uncertainty.",
+   "properties": {
+    "what": {
+     "type": "string",
+     "description": ""
+    },
+    "likelihood": {
+     "type": "object",
+     "description": "",
+     "properties": {
+      "value": {
+       "type": "number",
+       "description": ""
+      },
+      "uncertainty": {
+       "type": "string",
+       "description": ""
+      }
+     }
+    },
+    "consequence": {
+     "type": "object",
+     "description": "",
+     "properties": {
+      "value": {
+       "type": "number",
+       "description": ""
+      },
+      "unit": {
+       "type": "string",
+       "description": ""
+      },
+      "uncertainty": {
+       "type": "string",
+       "description": ""
+      }
+     }
+    }
+   }
+  },
+  "variant": {
+   "type": "string",
+   "description": "",
+   "enum": [
+    "base",
+    "stress",
+    "reverse_stress",
+    "climate"
+   ]
+  },
+  "technique": {
+   "type": "string",
+   "description": "Technique declared for the analysis (IEC 31010 reading of C0.1; C3.4)."
+  },
+  "inputs": {
+   "type": "array",
+   "description": "Every input with its version and retraction status (seventh principle) [13].",
+   "items": {
+    "type": "object",
+    "properties": {
+     "ref": {
+      "type": "string",
+      "description": ""
+     },
+     "version": {
+      "type": "string",
+      "description": ""
+     },
+     "retracted": {
+      "type": "boolean",
+      "description": ""
+     },
+     "checked_on": {
+      "type": "string",
+      "description": "",
+      "format": "date"
+     }
+    }
+   }
+  },
+  "convergence": {
+   "type": "object",
+   "description": "Convergence, validation and sensitivity panels for a simulation (C3.4) [26].",
+   "properties": {
+    "converged": {
+     "type": "boolean",
+     "description": ""
+    },
+    "runs": {
+     "type": "integer",
+     "description": ""
+    },
+    "sensitivity_ref": {
+     "type": "string",
+     "description": ""
+    }
+   }
+  },
+  "hazard_codes": {
+   "type": "array",
+   "description": "",
+   "items": {
+    "type": "string"
+   }
+  }
+ },
+ "required": [
+  "id",
+  "risk_ids",
+  "triplet",
+  "variant",
+  "technique"
+ ],
+ "additionalProperties": true
+}
