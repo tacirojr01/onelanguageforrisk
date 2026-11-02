@@ -1,4 +1,6 @@
-# One Language for Risk
+# One Language for Risk · companion site
+
+The site is published from this repository at https://onelanguageforrisk.org (static HTML generated from the data files below). The data themselves live in `catalog/`, `schema/`, `mappings/`, `hazard-subsets/`, `realignment/` and `research-agenda.md`.
 
 **The companion site of the book.** The printing in your hands describes **catalog 1.0** and **schema 1.0**.
 
