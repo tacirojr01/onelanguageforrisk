@@ -1,0 +1,144 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open formats · One Language for Risk</title><meta name="description" content="The companion site of One Language for Risk: the Consolidated Risk Management Framework, its forty-seven components, glossary, sources and open formats.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1F2933;--ink:#111827;--red:#7B2D26;--red2:#B8473C;--paper:#F2F1EE;--line:#D7D9DC;--muted:#5B6570;--gold:#9A7B2F;--bg:#ffffff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Source Serif 4",Georgia,serif;color:var(--ink);background:var(--bg);line-height:1.55;font-size:17px}
+a{color:var(--red);text-decoration:none}a:hover{text-decoration:underline}
+header.top{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 1px 0 rgba(0,0,0,.2)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.topbar{display:flex;align-items:center;gap:18px;min-height:60px;flex-wrap:wrap;padding:8px 20px}
+.menubtn{display:none;margin-left:auto;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:6px;padding:6px 10px;font-family:"Source Sans 3",system-ui,sans-serif;font-size:14px}
+.brand{font-family:"Source Sans 3",system-ui,sans-serif;font-weight:700;letter-spacing:.02em;color:#fff;font-size:17px;white-space:nowrap}
+.brand small{display:block;font-weight:400;font-size:11px;letter-spacing:.18em;opacity:.75;text-transform:uppercase}
+nav.main{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+nav.main a{font-family:"Source Sans 3",system-ui,sans-serif;color:#E5E7EB;font-size:13.5px;padding:5px 7px;border-radius:4px}
+nav.main a:hover,nav.main a.on{background:rgba(255,255,255,.12);text-decoration:none;color:#fff}
+.hero{background:var(--navy);color:#fff;padding:40px 0 48px}
+.hero h1{font-size:38px;line-height:1.1;margin:0 0 8px;font-weight:700}
+.hero p.lead{font-size:19px;max-width:720px;opacity:.95;margin:0 0 14px;color:#fff}
+.hero .kicker{font-family:"Source Sans 3",system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;font-size:12px;color:#C9CCCE;margin-bottom:12px}
+.hero .red{display:inline-block;width:70px;height:4px;background:var(--red2);margin:14px 0 6px}
+main{padding:32px 0 60px}
+h1{font-size:32px;line-height:1.15;margin:0 0 12px}h2{font-size:24px;margin:34px 0 10px;line-height:1.2}h3{font-size:19px;margin:24px 0 6px}
+p{margin:0 0 14px}
+.kicker{font-family:"Source Sans 3",system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;font-size:12px;color:var(--red);margin:0 0 6px}
+.lead{font-size:19px;color:#2B3440}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin:18px 0}
+.card{border:1px solid var(--line);border-radius:8px;padding:16px 18px;background:#fff}
+.card h3{margin:0 0 6px;font-size:17px}.card p{margin:0;font-size:15px;color:var(--muted)}
+.card a.more{font-family:"Source Sans 3",system-ui,sans-serif;font-size:14px;display:inline-block;margin-top:8px}
+.layers{display:grid;gap:8px;margin:18px 0}
+.layer{display:grid;grid-template-columns:70px 1fr auto;gap:14px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:12px 16px;background:var(--paper);color:inherit}
+.layer:hover{text-decoration:none;border-color:var(--navy)}
+.layer .code{font-family:"Source Sans 3",system-ui,sans-serif;font-weight:700;color:var(--gold);font-size:20px}
+.layer .name{font-weight:700;font-size:18px}.layer .q{color:var(--muted);font-size:15px}.layer .n{font-family:"Source Sans 3",system-ui,sans-serif;color:var(--muted);font-size:14px;white-space:nowrap}
+.layer.govern{background:var(--navy);color:#fff}.layer.govern .q{color:#C9CCCE}.layer.govern .n{color:#C9CCCE}
+.objects{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px;margin:14px 0}
+.obj{border:1px solid var(--line);border-radius:6px;padding:10px;text-align:center;font-family:"Source Sans 3",system-ui,sans-serif;font-weight:600;font-size:14px;background:#fff}
+.obj small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:12px 0 20px}
+th,td{border-top:1px solid var(--line);padding:9px 10px;vertical-align:top;text-align:left}th{font-family:"Source Sans 3",system-ui,sans-serif;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--paper)}
+.comp{border-left:4px solid var(--red);background:var(--paper);padding:14px 18px;border-radius:0 8px 8px 0;margin:14px 0}
+.comp .code{font-family:"Source Sans 3",system-ui,sans-serif;color:var(--gold);font-weight:700}
+.comp h3{margin:2px 0 6px}
+.meta{font-family:"Source Sans 3",system-ui,sans-serif;font-size:14px;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap;margin:6px 0 18px}
+.req{background:var(--paper);border-left:4px solid var(--red);padding:16px 20px;border-radius:0 8px 8px 0;font-size:18px;margin:14px 0 22px}
+.req .kicker{margin-bottom:6px}
+a.key{color:var(--gold);font-family:"Source Sans 3",system-ui,sans-serif;font-size:.9em}a.code{font-family:"Source Sans 3",system-ui,sans-serif;font-weight:600}
+.prevnext{display:flex;justify-content:space-between;border-top:1px solid var(--line);margin-top:30px;padding-top:14px;font-family:"Source Sans 3",system-ui,sans-serif;font-size:15px}
+.search{width:100%;padding:12px 14px;font-size:17px;border:1px solid var(--line);border-radius:8px;margin:10px 0 18px;font-family:inherit}
+.hit{display:none}
+.callout{border:1px solid var(--line);border-left:4px solid var(--gold);padding:14px 18px;border-radius:0 8px 8px 0;margin:16px 0;background:#fff}
+.callout .kicker{color:var(--gold)}
+pre{background:#0F1720;color:#E5E7EB;padding:14px 16px;border-radius:8px;overflow:auto;font-size:13px;line-height:1.45}
+code{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:var(--paper);padding:1px 4px;border-radius:3px}
+pre code{background:none;padding:0}
+figure{margin:18px 0}figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#fff}figcaption{font-family:"Source Sans 3",system-ui,sans-serif;font-size:14px;color:var(--muted);margin-top:8px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}@media(max-width:760px){.two{grid-template-columns:1fr}.layer{grid-template-columns:56px 1fr}.layer .n{display:none}.hero h1{font-size:30px}}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;font-family:"Source Sans 3",system-ui,sans-serif;font-size:14px;color:var(--muted)}
+.pill{display:inline-block;font-family:"Source Sans 3",system-ui,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:2px 10px;color:var(--muted);margin-right:6px}
+.toc{columns:2;gap:28px;font-size:15px}@media(max-width:760px){.toc{columns:1}}
+.toc a{display:block;padding:3px 0;border-bottom:1px solid #EEE}
+.badge{font-family:"Source Sans 3",system-ui,sans-serif;font-size:12px;color:#fff;background:var(--navy);border-radius:4px;padding:2px 6px}
+.badge.p{background:var(--gold)}
+@media(max-width:860px){.menubtn{display:block}nav.main{display:none;width:100%;flex-direction:column;gap:0;padding-bottom:8px}nav.main.open{display:flex}nav.main a{padding:9px 6px;border-top:1px solid rgba(255,255,255,.1);font-size:15px}}
+</style></head><body>
+<header class="top"><div class="wrap topbar"><a class="brand" href="index.html">One Language for Risk<small>Companion site · catalog 1.0</small></a><button class="menubtn" onclick="document.querySelector('nav.main').classList.toggle('open')">Menu</button><nav class="main"><a href="index.html" class="">Home</a><a href="framework.html" class="">The framework</a><a href="components.html" class="">Components</a><a href="glossary.html" class="">Glossary</a><a href="sources.html" class="">Sources</a><a href="formats.html" class="on">Open formats</a><a href="challenge.html" class="">Challenge</a><a href="research.html" class="">Research</a><a href="book.html" class="">The book</a></nav></div></header>
+<main><div class="wrap"><div class="kicker">Appendix C</div><h1>Open formats: records that can leave the building</h1>
+<p class="lead">Most of the twenty-seven sources are prose: principles and steps that each organisation translates into its own fields, differently. Four publish a format a program can check. This page explains what that means for a risk professional, and then offers the files.</p>
+<h2>What a schema is, in plain words</h2><p>A <strong>schema</strong> is the list of fields a record must have, with the type of each (a date, a number, one of a fixed set of values) and the rules they obey. When two organisations adopt the same <em>idea</em>, each designs its own table, and the two cannot be joined without a mapping that someone writes, maintains and gets wrong. When they adopt the same <em>format</em>, there is nothing to map: a record can leave the organisation, to a supervisor, an insurer, a parent or an auditor, and arrive meaning the same thing. A <strong>validator</strong> is a program that checks a record against the schema and says whether it conforms, so the check is run by software rather than argued in a meeting.</p>
+<p>The files below are written in <strong>JSON</strong>, a plain-text format for structured data that any program can read: a record is a list of named fields and their values. Despite the name, it has nothing to do with programming in JavaScript; it is simply the common language for exchanging data between systems, the way PDF is for documents.</p>
+<h2>The four formats the framework adopts</h2>
+<table><thead><tr><th>Object</th><th>Published by</th><th>What the framework does</th></tr></thead><tbody>
+<tr><td><strong>Risk</strong> (register row and detail record)</td><td>NIST IR 8286 Rev. 1 <a class="key" href="sources.html#s9">[9]</a>: eleven fields for the row, thirty-four for the detail record, as JSON schemas</td><td>Adopts the schema whole (component <a class="code" href="components/C6.1.html">C6.1</a>) and adds its own fields as extensions, so a row stays valid under the base schema</td></tr>
+<tr><td><strong>Event</strong> (loss event, near miss, incident)</td><td>FSB Format for Incident Reporting Exchange, FIRE <a class="key" href="sources.html#s27">[27]</a>: eighty-seven items in four sections</td><td>One incident record for cyber, operational and third-party events (<a class="code" href="components/C5.4.html">C5.4</a>)</td></tr>
+<tr><td><strong>Hazard</strong></td><td>UNDRR/ISC Hazard Information Profiles <a class="key" href="sources.html#s24">[24]</a>: 281 hazards with persistent identifiers</td><td>A controlled vocabulary every identification exercise consults (<a class="code" href="components/C2.5.html">C2.5</a>)</td></tr>
+<tr><td><strong>Software component</strong></td><td>CISA SBOM minimum elements <a class="key" href="sources.html#s15">[15]</a></td><td>The component beneath the supplier, with the rule that gaps are declared as gaps (<a class="code" href="components/C2.7.html">C2.7</a>)</td></tr></tbody></table>
+<h2>The five the framework proposes</h2><p>No open schema exists for an objective, a control, a scenario, an indicator or an assurance activity: the things an organisation <em>does</em> about risk rather than what happens to it. The framework publishes draft schemas for the five, shaped like the four that exist, with the attributes of Table 19.1 of the book. They stay proposals until someone other than the author has used them in a running register; if you have, <a href="challenge.html">tell us</a>.</p>
+<h2>A worked example, read field by field</h2><p>This is the payments risk of chapters 17 and 18 of the book, PAY-014, as a register row with the framework's extensions. The first block is the published NIST row: identifier, the validated statement as description, category, likelihood, impact, exposure, response, cost, owner and status. The <code>crmf</code> block carries what the framework adds: the statement broken into its four parts, the taxonomy node, the tier, the consequence against each objective, the precision of the likelihood, the three snapshots of exposure (inherent, expected, measured), the actual cost of the response, the named decider, the Action Priority band, and the versions the row was scored under.</p>
+<pre><code>{
+  "id": "PAY-014",
+  "description": "Given that beneficiary details for high-value payments are verified by a telephone callback performed from memory under cutoff pressure, there is a possibility that a payment is released to a fraudulent or mistaken beneficiary, affecting the corporate payments service, with an unrecoverable loss and a late payment for the client.",
+  "category": "Process execution › manual verification",
+  "likelihood": 3,
+  "impact": 4,
+  "exposure": 12,
+  "response_type": "mitigate",
+  "response_cost": 420000,
+  "response_description": "Selection report SR-2026-07: beneficiary verification block and automated matching.",
+  "owner": "Head of payment operations",
+  "status": "in progress",
+  "crmf": {
+    "validated_statement": {
+      "condition": "beneficiary details for high-value payments are verified by a telephone callback performed from memory under cutoff pressure",
+      "departure": "a payment is released to a fraudulent or mistaken beneficiary",
+      "asset": "the corporate payments service",
+      "consequence": "an unrecoverable loss and a late payment for the client"
+    },
+    "taxonomy_node": "process execution / manual verification",
+    "process": "corporate payments",
+    "tier": "process",
+    "consequence_per_objective": [
+      {
+        "objective_id": "OBJ-PAY-ACCURACY",
+        "consequence": 4
+      },
+      {
+        "objective_id": "OBJ-PAY-TIMELINESS",
+        "consequence": 2
+      },
+      {
+        "objective_id": "OBJ-CLIENT-TRUST",
+        "consequence": 3
+      }
+    ],
+    "likelihood_precision": "estimated from two internal events and one peer case",
+    "scale_version": "bank-scale-2026.1",
+    "exposure": {
+      "inherent": 1800000,
+      "expected": 300000,
+      "measured": 150000
+    },
+    "response_cost_actual": 510000,
+    "decider": "Head of payment operations",
+    "opportunity": false,
+    "action_priority": "H",
+    "scored_under": {
+      "criteria_version": "2026.1",
+      "catalog_version": "1.0"
+    }
+  }
+}</code></pre>
+<h2>The files</h2><table><thead><tr><th>File</th><th>What it is</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/tacirojr01/onelanguageforrisk/blob/main/schema/register-row-extensions.schema.json">register-row-extensions.schema.json</a> <span class="badge">current</span></td><td>The framework's extension fields to the NIST register row</td></tr>
+<tr><td><a href="https://github.com/tacirojr01/onelanguageforrisk/blob/main/schema/proposals/objective.schema.json">objective.schema.json</a> <span class="badge p">proposal</span></td><td>Objective: tier, appetite position, tolerance, aggregated likelihood of being missed</td></tr>
+<tr><td><a href="https://github.com/tacirojr01/onelanguageforrisk/blob/main/schema/proposals/control.schema.json">control.schema.json</a> <span class="badge p">proposal</span></td><td>Control: hierarchy level, mode, human dependence, decay, measured effectiveness, designer and assurer</td></tr>
+<tr><td><a href="https://github.com/tacirojr01/onelanguageforrisk/blob/main/schema/proposals/scenario.schema.json">scenario.schema.json</a> <span class="badge p">proposal</span></td><td>Scenario: the triplet with uncertainty, variant, technique, versioned inputs</td></tr>
+<tr><td><a href="https://github.com/tacirojr01/onelanguageforrisk/blob/main/schema/proposals/indicator.schema.json">indicator.schema.json</a> <span class="badge p">proposal</span></td><td>Indicator: leading or lagging, threshold, breach record, data lineage</td></tr>
+<tr><td><a href="https://github.com/tacirojr01/onelanguageforrisk/blob/main/schema/proposals/assurance-activity.schema.json">assurance-activity.schema.json</a> <span class="badge p">proposal</span></td><td>Assurance activity: line, provider, reliance, twelve-month safeguard, opinion</td></tr>
+<tr><td><a href="https://github.com/tacirojr01/onelanguageforrisk/blob/main/schema/examples/PAY-014.json">PAY-014.json</a></td><td>The worked example above</td></tr></tbody></table>
+<p style="font-family:'Source Sans 3',sans-serif;font-size:14px;color:var(--muted)">Schemas are released under CC0 1.0 so that nothing stands between an implementer and the file. Every record carries the schema version it validates against and the catalog version it was scored under.</p></div></main>
+<footer><div class="wrap">Companion site of <em>One Language for Risk</em> (Affonso Taciro Júnior, 2026). Catalog 1.0 · Schema 1.0. Text CC BY 4.0, schemas CC0 1.0. The repository with every file and version is on <a href="https://github.com/tacirojr01/onelanguageforrisk">GitHub</a>; <a href="changelog.html">changelog</a>.</div></footer>
+</body></html>
