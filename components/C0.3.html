@@ -1,0 +1,77 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>C0.3 Three lines and prohibitions · One Language for Risk</title><meta name="description" content="The companion site of One Language for Risk: the Consolidated Risk Management Framework, its forty-seven components, glossary, sources and open formats.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1F2933;--ink:#111827;--red:#7B2D26;--red2:#B8473C;--paper:#F2F1EE;--line:#D7D9DC;--muted:#5B6570;--gold:#9A7B2F;--bg:#ffffff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Source Serif 4",Georgia,serif;color:var(--ink);background:var(--bg);line-height:1.55;font-size:17px}
+a{color:var(--red);text-decoration:none}a:hover{text-decoration:underline}
+header.top{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 1px 0 rgba(0,0,0,.2)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.topbar{display:flex;align-items:center;gap:18px;min-height:60px;flex-wrap:wrap;padding:8px 20px}
+.menubtn{display:none;margin-left:auto;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:6px;padding:6px 10px;font-family:"Source Sans 3",system-ui,sans-serif;font-size:14px}
+.brand{font-family:"Source Sans 3",system-ui,sans-serif;font-weight:700;letter-spacing:.02em;color:#fff;font-size:17px;white-space:nowrap}
+.brand small{display:block;font-weight:400;font-size:11px;letter-spacing:.18em;opacity:.75;text-transform:uppercase}
+nav.main{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+nav.main a{font-family:"Source Sans 3",system-ui,sans-serif;color:#E5E7EB;font-size:13.5px;padding:5px 7px;border-radius:4px}
+nav.main a:hover,nav.main a.on{background:rgba(255,255,255,.12);text-decoration:none;color:#fff}
+.hero{background:var(--navy);color:#fff;padding:40px 0 48px}
+.hero h1{font-size:38px;line-height:1.1;margin:0 0 8px;font-weight:700}
+.hero p.lead{font-size:19px;max-width:720px;opacity:.95;margin:0 0 14px;color:#fff}
+.hero .kicker{font-family:"Source Sans 3",system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;font-size:12px;color:#C9CCCE;margin-bottom:12px}
+.hero .red{display:inline-block;width:70px;height:4px;background:var(--red2);margin:14px 0 6px}
+main{padding:32px 0 60px}
+h1{font-size:32px;line-height:1.15;margin:0 0 12px}h2{font-size:24px;margin:34px 0 10px;line-height:1.2}h3{font-size:19px;margin:24px 0 6px}
+p{margin:0 0 14px}
+.kicker{font-family:"Source Sans 3",system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;font-size:12px;color:var(--red);margin:0 0 6px}
+.lead{font-size:19px;color:#2B3440}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin:18px 0}
+.card{border:1px solid var(--line);border-radius:8px;padding:16px 18px;background:#fff}
+.card h3{margin:0 0 6px;font-size:17px}.card p{margin:0;font-size:15px;color:var(--muted)}
+.card a.more{font-family:"Source Sans 3",system-ui,sans-serif;font-size:14px;display:inline-block;margin-top:8px}
+.layers{display:grid;gap:8px;margin:18px 0}
+.layer{display:grid;grid-template-columns:70px 1fr auto;gap:14px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:12px 16px;background:var(--paper);color:inherit}
+.layer:hover{text-decoration:none;border-color:var(--navy)}
+.layer .code{font-family:"Source Sans 3",system-ui,sans-serif;font-weight:700;color:var(--gold);font-size:20px}
+.layer .name{font-weight:700;font-size:18px}.layer .q{color:var(--muted);font-size:15px}.layer .n{font-family:"Source Sans 3",system-ui,sans-serif;color:var(--muted);font-size:14px;white-space:nowrap}
+.layer.govern{background:var(--navy);color:#fff}.layer.govern .q{color:#C9CCCE}.layer.govern .n{color:#C9CCCE}
+.objects{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px;margin:14px 0}
+.obj{border:1px solid var(--line);border-radius:6px;padding:10px;text-align:center;font-family:"Source Sans 3",system-ui,sans-serif;font-weight:600;font-size:14px;background:#fff}
+.obj small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:12px 0 20px}
+th,td{border-top:1px solid var(--line);padding:9px 10px;vertical-align:top;text-align:left}th{font-family:"Source Sans 3",system-ui,sans-serif;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--paper)}
+.comp{border-left:4px solid var(--red);background:var(--paper);padding:14px 18px;border-radius:0 8px 8px 0;margin:14px 0}
+.comp .code{font-family:"Source Sans 3",system-ui,sans-serif;color:var(--gold);font-weight:700}
+.comp h3{margin:2px 0 6px}
+.meta{font-family:"Source Sans 3",system-ui,sans-serif;font-size:14px;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap;margin:6px 0 18px}
+.req{background:var(--paper);border-left:4px solid var(--red);padding:16px 20px;border-radius:0 8px 8px 0;font-size:18px;margin:14px 0 22px}
+.req .kicker{margin-bottom:6px}
+a.key{color:var(--gold);font-family:"Source Sans 3",system-ui,sans-serif;font-size:.9em}a.code{font-family:"Source Sans 3",system-ui,sans-serif;font-weight:600}
+.prevnext{display:flex;justify-content:space-between;border-top:1px solid var(--line);margin-top:30px;padding-top:14px;font-family:"Source Sans 3",system-ui,sans-serif;font-size:15px}
+.search{width:100%;padding:12px 14px;font-size:17px;border:1px solid var(--line);border-radius:8px;margin:10px 0 18px;font-family:inherit}
+.hit{display:none}
+.callout{border:1px solid var(--line);border-left:4px solid var(--gold);padding:14px 18px;border-radius:0 8px 8px 0;margin:16px 0;background:#fff}
+.callout .kicker{color:var(--gold)}
+pre{background:#0F1720;color:#E5E7EB;padding:14px 16px;border-radius:8px;overflow:auto;font-size:13px;line-height:1.45}
+code{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:var(--paper);padding:1px 4px;border-radius:3px}
+pre code{background:none;padding:0}
+figure{margin:18px 0}figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#fff}figcaption{font-family:"Source Sans 3",system-ui,sans-serif;font-size:14px;color:var(--muted);margin-top:8px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}@media(max-width:760px){.two{grid-template-columns:1fr}.layer{grid-template-columns:56px 1fr}.layer .n{display:none}.hero h1{font-size:30px}}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;font-family:"Source Sans 3",system-ui,sans-serif;font-size:14px;color:var(--muted)}
+.pill{display:inline-block;font-family:"Source Sans 3",system-ui,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:2px 10px;color:var(--muted);margin-right:6px}
+.toc{columns:2;gap:28px;font-size:15px}@media(max-width:760px){.toc{columns:1}}
+.toc a{display:block;padding:3px 0;border-bottom:1px solid #EEE}
+.badge{font-family:"Source Sans 3",system-ui,sans-serif;font-size:12px;color:#fff;background:var(--navy);border-radius:4px;padding:2px 6px}
+.badge.p{background:var(--gold)}
+@media(max-width:860px){.menubtn{display:block}nav.main{display:none;width:100%;flex-direction:column;gap:0;padding-bottom:8px}nav.main.open{display:flex}nav.main a{padding:9px 6px;border-top:1px solid rgba(255,255,255,.1);font-size:15px}}
+</style></head><body>
+<header class="top"><div class="wrap topbar"><a class="brand" href="../index.html">One Language for Risk<small>Companion site · catalog 1.0</small></a><button class="menubtn" onclick="document.querySelector('nav.main').classList.toggle('open')">Menu</button><nav class="main"><a href="../index.html" class="">Home</a><a href="../framework.html" class="">The framework</a><a href="../components.html" class="">Components</a><a href="../glossary.html" class="">Glossary</a><a href="../sources.html" class="">Sources</a><a href="../formats.html" class="">Open formats</a><a href="../challenge.html" class="">Challenge</a><a href="../research.html" class="">Research</a><a href="../book.html" class="">The book</a></nav></div></header>
+<main><div class="wrap"><div class="kicker"><a href="../layers/L0.html">Layer L0 · Govern</a></div><h1><span style="color:var(--gold);font-family:'Source Sans 3',sans-serif">C0.3</span> Three lines and prohibitions</h1>
+<div class="meta"><span>Catalog 1.0</span><span>Chapter 15 of the book</span><span>Sources: <a class="key" href="../sources.html#s18">[18]</a></span></div>
+<div class="req"><div class="kicker">What it requires</div>Management owns risks and controls; independent functions oversee; internal audit assures; a governing body is named as accountable for all three. Three prohibitions are written into policy: internal audit does not set appetite, does not choose responses, does not own policies. Whoever designed a control does not assure it for twelve months.</div>
+<div class="kicker">Provenance</div><p>IIA Global Internal Audit Standards 2024 and statements of position, July 2026 <a class="key" href="../sources.html#s18">[18]</a></p>
+<div class="kicker" style="margin-top:22px">Specification, origin and what it reconciles</div><p>The component requires that management own risks and controls, that independent functions oversee them, and that internal audit assure them; that a governing body be named as accountable for all three; and that three prohibitions be written into policy: internal audit does not set the appetite, does not choose the response to a risk and does not own a policy. It adds a safeguard of time: whoever designed a control does not assure it for twelve months (<a class="code" href="../components/C0.3.html">C0.3</a>) <a class="key" href="../sources.html#s18">[18]</a>. Most organizations have the three lines on a slide; few have written down what the third line may not do, and in the gap the auditors end up writing the appetite they will later opine on.</p><p>It comes from the auditors' institute, whose Global Internal Audit Standards took effect in January 2025 and whose statements of position of July 2026 replaced the model most practitioners still draw. The Part II reading found this to be the only source in the set that says, in writing, what a risk function may not do, and found the temporal safeguard the most useful of its rules because it treats independence as a matter of time rather than of organization charts. The 2026 statement is also explicit that the three lines are roles, not a structure. What the component reconciles is the vocabulary of lines: first, second and third in the auditors' usage, owner, oversight function and assurer in the framework's, with the governing body above all three. The prohibitions become design constraints on every other layer: a response in L4 cannot be recorded with internal audit as its decider, an appetite in L1 cannot be approved by the third line, and the assurance map in L6 carries the twelve-month rule as a field on every assurance activity.</p>
+<div class="callout"><div class="kicker">Status</div><p style="margin:0">Current in catalog 1.0. A component is never deleted, only marked retired, and every change is recorded in the <a href="../changelog.html">changelog</a>. Think it is wrong? <a href="../challenge.html">Challenge it</a>.</p></div>
+<div class="prevnext"><a href="../components/C0.2.html">← C0.2 Governance and culture</a><a href="../components.html">All components</a><a href="../components/C0.4.html">C0.4 Govern first →</a></div></div></main>
+<footer><div class="wrap">Companion site of <em>One Language for Risk</em> (Affonso Taciro Júnior, 2026). Catalog 1.0 · Schema 1.0. Text CC BY 4.0, schemas CC0 1.0. The repository with every file and version is on <a href="https://github.com/tacirojr01/onelanguageforrisk">GitHub</a>; <a href="../changelog.html">changelog</a>.</div></footer>
+</body></html>
