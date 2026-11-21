@@ -4,7 +4,7 @@ The site is published from this repository at https://onelanguageforrisk.org (st
 
 **The companion site of the book.** The printing in your hands describes **catalog 1.0** and **schema 1.0**.
 
-*One Language for Risk* (Affonso Taciro Júnior, 2026) reads twenty-seven open risk-management sources, from ISO 31000 and COSO to the Basel Committee, NIST, NASA, FMEA and the Sendai Framework, and proposes the Consolidated Risk Management Framework: seven layers, forty-seven components, three lenses and eight objects, every component carrying the key of the source it came from. This site holds the parts of the book that have to be able to change.
+*One Language for Risk* (Affonso Taciro Junior, 2026) reads twenty-seven open risk-management sources, from ISO 31000 and COSO to the Basel Committee, NIST, NASA, FMEA and the Sendai Framework, and proposes the Consolidated Risk Management Framework: seven layers, forty-seven components, three lenses and eight objects, every component carrying the key of the source it came from. This site holds the parts of the book that have to be able to change.
 
 | | |
 |---|---|
@@ -17,6 +17,6 @@ The site is published from this repository at https://onelanguageforrisk.org (st
 | **Challenge a component** | [`CONTRIBUTING.md`](CONTRIBUTING.md) — the rules under which the catalog moves |
 | **Changelog** | [`CHANGELOG.md`](CHANGELOG.md) |
 
-Versions: see `CHANGELOG.md`. Releases are archived with a DOI on Zenodo. Licences: CC BY 4.0 for text, CC0 1.0 for schemas; see `LICENSE.md`.
+Versions: see `CHANGELOG.md`. Releases will be archived with a DOI on Zenodo. Licences: CC BY 4.0 for text, CC0 1.0 for schemas; see `LICENSE.md`.
 
-The book is available on Amazon in paperback, hardcover and Kindle editions.
+**Get the book:** on Amazon in [paperback](https://www.amazon.com/dp/B0HSCMHV26), [hardcover](https://www.amazon.com/dp/B0HSCSQN43) and [Kindle](https://www.amazon.com/dp/B0HS4Z16XR); in Brazil, [Kindle on Amazon.com.br](https://www.amazon.com.br/dp/B0HS4Z16XR). Paperback ISBN 979-8-1432-5237-0, hardcover ISBN 979-8-1432-5500-5.

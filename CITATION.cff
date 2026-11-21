@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use the catalog or the schema, please cite them as below."
 title: "One Language for Risk — component catalog and open register schema"
 authors:
-  - family-names: "Taciro Júnior"
+  - family-names: "Taciro Junior"
     given-names: "Affonso"
 version: "1.0"
 date-released: "2026-11-01"
@@ -13,6 +13,7 @@ references:
   - type: book
     title: "One Language for Risk: How twenty-seven open frameworks become one, and why every board, risk officer, auditor and regulator should read the same page"
     authors:
-      - family-names: "Taciro Júnior"
+      - family-names: "Taciro Junior"
         given-names: "Affonso"
     year: 2026
+    url: "https://www.amazon.com/dp/B0HS4Z16XR"
