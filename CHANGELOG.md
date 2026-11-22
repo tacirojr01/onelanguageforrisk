@@ -2,6 +2,10 @@
 
 All notable changes to the catalog (appendix B) and the schema (appendix C). Nothing is deleted; nothing changes silently.
 
+## Site update — 2026-11-22
+
+Anonymous visit counting with GoatCounter: no cookies, no personal data. The catalog and the schema are unchanged (1.0).
+
 ## Site update — 2026-11-21
 
 The book is out: links to the paperback, hardcover and Kindle editions on Amazon on every page. The catalog and the schema are unchanged (1.0).
